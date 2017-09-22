@@ -133,19 +133,19 @@ p {
   font-size: 1.125em;
 }
 
-header:hover > #first {
+#first {
   animation: glitch1 .5s cubic-bezier(.25, .46, .45, .94) both infinite;
   position: relative;
   z-index: -3;
 }
 
-header:hover > #second {
+#second {
   animation: glitch2 .5s cubic-bezier(.25, .46, .45, .94) both infinite;
   position: relative;
   z-index: -2;
 }
 
-header:hover > #third {
+#third {
   position: relative;
   z-index: 1;
 }
@@ -156,10 +156,6 @@ main {
 }
 
 .about {
-  padding-bottom: 1em;
-}
-
-.svg-wrapper {
   padding-bottom: 1em;
 }
 
@@ -177,7 +173,10 @@ footer {
 
 .gifbox {
   padding-top: 320px;
+  margin-bottom: 2em;
   background-image: url("../images/faceloop.gif");
   background-repeat: no-repeat;
   background-position: center;
+  animation: pop .75s ease-in 1;
+  transform-origin: left;
 }

@@ -1,0 +1,183 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+html {
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(54, 54, 54);
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.push-0 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@keyframes glitch1 {
+  0% {
+    transform: translate(0)
+  }
+  20% {
+    transform: translate(-2px, 2px)
+  }
+  40% {
+    transform: translate(-2px, -2px)
+  }
+  60% {
+    transform: translate(2px, 2px)
+  }
+  80% {
+    transform: translate(2px, -2px)
+  }
+  to {
+    transform: translate(0)
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: translate(0)
+  }
+  20% {
+    transform: translate(2px, -2px)
+  }
+  40% {
+    transform: translate(2px, 2px)
+  }
+  60% {
+    transform: translate(-2px, -2px)
+  }
+  80% {
+    transform: translate(-2px, 2px)
+  }
+  to {
+    transform: translate(0)
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+header, main, footer {
+  animation: pop .75s ease-in 1;
+}
+
+header {
+  padding-top: 10em;
+  padding-bottom: 2em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 0;
+  color: rgb(249, 14, 112);
+}
+
+h1:nth-child(2) {
+  color: rgb(14, 249, 94);
+}
+
+h1:nth-child(3) {
+  color: rgb(240, 240, 240);
+}
+
+p {
+  font-weight: normal;
+  font-size: 1.125em;
+}
+
+header:hover > #first {
+  animation: glitch1 .5s cubic-bezier(.25, .46, .45, .94) both infinite;
+  position: relative;
+  z-index: -3;
+}
+
+header:hover > #second {
+  animation: glitch2 .5s cubic-bezier(.25, .46, .45, .94) both infinite;
+  position: relative;
+  z-index: -2;
+}
+
+header:hover > #third {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  padding-bottom: 2em;
+  transform-origin: right;
+}
+
+.about {
+  padding-bottom: 1em;
+}
+
+.svg-wrapper {
+  padding-bottom: 1em;
+}
+
+#vimeo-icon {
+  margin-right: 1em;
+}
+
+svg:hover {
+  animation: wiggle 1s ease-in-out 1;
+}
+
+footer {
+  transform-origin: left;
+}
+
+.gifbox {
+  padding-top: 320px;
+  background-image: url("../images/faceloop.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}

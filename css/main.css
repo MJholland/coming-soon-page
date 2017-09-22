@@ -204,7 +204,7 @@ svg:hover {
 footer {
   opacity: 0;
   transform-origin: left;
-  animation: rollIn 1s .75s forwards ease-in 1;
+  animation: rollIn 1.5s .75s forwards ease-in 1;
 }
 
 .gifbox {

@@ -103,15 +103,12 @@ body {
   }
 }
 
-header, main, footer {
-  animation: pop .75s ease-in 1;
-}
-
 header {
   padding-top: 10em;
   padding-bottom: 2em;
   font-weight: bold;
   margin-bottom: 2em;
+  animation: pop .75s ease-in 1;
 }
 
 h1 {
@@ -153,6 +150,7 @@ p {
 main {
   padding-bottom: 2em;
   transform-origin: right;
+  animation: pop .75s ease-in 1;
 }
 
 .about {
@@ -168,7 +166,8 @@ svg:hover {
 }
 
 footer {
-  transform-origin: left;
+  transform-origin: bottom;
+  animation: pop .8s ease-in 1;
 }
 
 .gifbox {
